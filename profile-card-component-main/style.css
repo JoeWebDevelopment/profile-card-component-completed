@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap');
+
+@layer customcss{
+:root{
+
+--clr-Blue-600: hsl(185, 75%, 39%);
+--clr-Navy-950: hsl(229, 23%, 23%);
+--clr-Gray-500: hsl(227, 10%, 46%);
+--clr-Gray-100: hsl(225, 10%, 92%);
+
+--ff-primary: "Kumbh Sans", sans-serif;
+--fs-body: 1.2rem;
+--fs-sm: .875rem;
+
+}
+
+
+}
+
+
+@layer reset{
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+}
+
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-position: top -500px left -25%, bottom -400px right -25%;
+    background-repeat: no-repeat;
+    background-color: var(--clr-Blue-600);
+    font-family: var(--ff-primary);
+}
+
+main{
+    height: 100%;
+    border-radius: 12px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-Gray-100);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 12px 12px;
+    gap: 1.5rem;
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    gap: 1.5rem;
+}
+
+.card-banner-container{
+    
+    
+}
+
+
+.profile-img-container{
+    position: absolute;
+    top: 50%;
+    border-radius: 100%;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.profile-img{
+    border-radius: 50%;
+    border: 5px solid var(--clr-Gray-100);
+    margin: 0;
+    padding: 0;
+    
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: .5rem;
+    
+}
+
+.profile-demographics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    gap: .5rem;
+    font-size: var(--fs-body);
+    color: var(--clr-Gray-500);   
+    
+    padding: 0;
+    margin: 0;
+    line-height: 115%;
+    font-weight: 500;
+    
+}
+
+.profile-heading{
+    font-size: var(--fs-body);
+    color: var(--clr-Navy-950);
+    line-height: 115%;
+    font-weight: 700;
+}
+
+.location{
+    color: var(--clr-Gray-500);
+    margin-bottom: 1rem;
+}
+
+.profile-stats{
+    display: flex;
+    flex-direction: row;
+    padding: .25rem;
+    
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;;
+}
+
+hr{
+    width: 100%;
+    color: var(--clr-Gray-100);
+}
+.profile-stats p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--clr-Gray-500);
+    letter-spacing: 1px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+
+    span{
+        color: var(--clr-Navy-950);
+        font-size: var(--fs-body);
+        font-weight: 700;
+    }
+
+}
